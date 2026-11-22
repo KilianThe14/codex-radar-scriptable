@@ -4,25 +4,36 @@
 
 [下载 Codex-Radar.scriptable](https://github.com/KilianThe14/codex-radar-scriptable/releases/latest/download/Codex-Radar.scriptable)
 
-<img src="docs/preview.png" width="420" alt="Codex Radar 的复古液晶四格小组件主屏幕示意">
+<img src="docs/preview.jpg" width="420" alt="iPhone 主屏幕截图，中号 Codex Radar 小组件显示四个模型的质量分和成本">
 
 ## 安装到 iPhone
 
-1. 安装 Scriptable，并打开 App 一次。 [App Store](https://apps.apple.com/app/scriptable/id1405459188)
-2. 用 iPhone 下载上面的 `Codex-Radar.scriptable`，存到「文件」App。也可以从 Mac 隔空投送，或放进 iCloud 云盘。
-3. 在「文件」里长按安装包，选「共享」→ **Scriptable** → **Add to My Scripts**。分享菜单里的「更多」可以展开 App 列表。
-4. 在 Scriptable 里运行 **Codex Radar**。看到液晶四格和右上角的时间，就完成了首次取数。
-5. 回到主屏幕，长按空白处 →「编辑」→「添加小组件」，找到 Scriptable，选择**中号**。添加后长按这个组件 →「编辑小组件」→ **Script** → **Codex Radar**。 [Apple 小组件指南](https://support.apple.com/zh-cn/118610)
+### 1. 下载并导入脚本
 
-如果组件显示 `Configure widget to select the script to run`，回到第 5 步，在 **Script** 里选定脚本。
+1. 在 iPhone 上安装 **Scriptable**，打开 App 一次。 [在 App Store 获取 Scriptable](https://apps.apple.com/app/scriptable/id1405459188)
+2. 用 iPhone 的 **Safari** 打开本页，轻点上方的安装包链接并下载。在「文件」App 的「浏览」中，进入「iCloud 云盘」或「我的 iPhone」下的「下载项」，找到 `Codex-Radar.scriptable`。 [Apple 下载项指南](https://support.apple.com/zh-cn/102440)
+3. 在「文件」里长按安装包，选择「共享」→ **Scriptable** → **Add to My Scripts（添加到我的脚本）**。如果分享栏没看到 Scriptable，滑到末尾点「更多」。
+
+如果仍找不到导入入口，可以在 Safari 打开下方的 JavaScript 源码并复制全文，然后在 Scriptable 点「+」新建脚本，粘贴后将脚本命名为 **Codex Radar**。 [打开 JavaScript 源码](https://raw.githubusercontent.com/KilianThe14/codex-radar-scriptable/main/src/codex-radar.js)
+
+### 2. 在 Scriptable 里运行一次
+
+打开 **Scriptable**，轻点脚本列表里的 **Codex Radar**。联网运行后，看到四格和右上角的时间，就完成了首次取数。点 **Close（关闭）** 退出预览，再回到 iPhone 主屏幕。
+
+### 3. 在 iPhone 主屏幕添加并配置
+
+1. 长按主屏幕空白处，点左上角的「编辑」→「添加小组件」。如果左上角显示「+」，点「+」进入小组件列表。
+2. 搜索并选择 **Scriptable**。左右滑到**中号**（横向长方形），点「添加小组件」，再点「完成」。
+3. **长按主屏幕上刚添加的 Scriptable 小组件**，点「编辑小组件」。在 **Script（脚本）** 里选 **Codex Radar**。**Parameter（参数）** 留空，**When Interacting（交互时）** 使用默认值。组件显示 `Configure widget to select the script to run` 时，就是在等待选择脚本。
+4. 轻点配置面板外的空白处，回到主屏幕查看四格和右上角的取数时间。 [Apple 小组件指南](https://support.apple.com/zh-cn/guide/iphone/iphb8f1bf206/ios)
 
 ## 刷新和升级
 
-每次取数成功后，组件把下一次可刷新的时间设为两小时后，实际执行时间由 iOS 调度。断网或接口异常时，组件保留上次成功的榜单和时间，并请求最早在 30 分钟后重试。 [Scriptable 刷新文档](https://docs.scriptable.app/listwidget/#refreshafterdate)
+组件由 iOS 自动刷新。每次取数成功后，最早可在两小时后再次刷新，具体时间由 iOS 调度。断网或接口异常时，组件保留上次成功的榜单和时间，并请求最早在 30 分钟后重试。 [Scriptable 刷新文档](https://docs.scriptable.app/listwidget/#refreshafterdate)
 
 轻点组件会打开 Scriptable，重新取数并显示预览。主屏幕在 iOS 下一次重载组件时更新。要判断后台是否刷新过，看主屏幕右上角的时间是否自行变化。
 
-升级时，从下载链接取得最新版，按安装步骤重新导入，再把现有组件的 **Script** 指向刚导入的脚本。
+升级时，从下载链接取得最新版并重新导入。在主屏幕长按已有组件，选择「编辑小组件」，将 **Script** 指向刚导入的脚本。
 
 ## 从源码构建
 
@@ -30,7 +41,7 @@
 
 ```bash
 git clone https://github.com/KilianThe14/codex-radar-scriptable.git
-cd codex-radar-widget
+cd codex-radar-scriptable
 node scripts/build.mjs
 ```
 
