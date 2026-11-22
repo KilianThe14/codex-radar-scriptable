@@ -2,7 +2,7 @@
 
 在 iPhone 主屏幕和 Mac 桌面看 Codex 雷达榜单的前四个模型。每格显示该模型的最高分档位、智商分数和美元费用估算，右上角显示北京时间的取数时间。
 
-[下载 iPhone 安装包](https://github.com/KilianThe14/codex-radar-scriptable/releases/latest/download/Codex-Radar.scriptable) · [用 Agent 安装 iPhone 版](#用-agent-安装) · [Mac 安装教程](#安装到-mac)
+[下载 iPhone 安装包](https://github.com/KilianThe14/codex-radar-scriptable/releases/latest/download/Codex-Radar.scriptable) · [用 Agent 安装 iPhone 版](#用-agent-安装) · [Mac 安装教程](#安装到-mac) · [用 Agent 安装 Mac 版](#用-agent-安装-mac-版)
 
 <img src="docs/preview.jpg" width="420" alt="iPhone 主屏幕截图，中号 Codex Radar 小组件显示四个模型的质量分和成本">
 
@@ -65,6 +65,21 @@ node scripts/build.mjs
 ## 安装到 Mac
 
 Mac 版是原生 WidgetKit 小组件。安装需要 macOS 14 或更新版本、Xcode 命令行工具，以及你本机钥匙串中有效的 **Apple Development** 签名身份。
+
+### 用 Agent 安装 Mac 版
+
+复制下面的 Prompt 发给 Agent，它会从你已完成的步骤继续，一直走到桌面显示小组件。
+
+```text
+请帮我在这台 Mac 上安装 Codex Radar，并把中号小组件加到桌面。先读 README 的「安装到 Mac」，然后从我已经完成的步骤继续。
+https://github.com/KilianThe14/codex-radar-scriptable#安装到-mac
+
+1. 检查这台 Mac 是否运行 macOS 14 或更新版本，以及是否已有 Xcode 命令行工具和有效的 Apple Development 签名身份。按 README 补齐缺的部分。需要创建签名时，带我在 Xcode 的 Settings → Accounts 中登录、选择团队，再从 Manage Certificates 的「+」创建 Apple Development。Apple 账户登录、验证码和钥匙串授权由我在 Mac 上完成。有多个有效签名身份时，请让我选一个。
+2. 在 Mac 上打开已有的仓库或克隆 GitHub 仓库，按 README 运行 python3 macos/install.py。需要选择签名身份时，按说明传入 --identity。安装完打开 Codex Radar，确认应用已联网显示四个模型和右上角的时间。
+3. 在桌面空白处右键，或按住 Control 点按墙纸。选「编辑小组件」，搜索 Codex Radar，添加中号组件，再点「完成」。若桌面已有组件，直接检查现有组件。
+
+能操作我授权的这台 Mac 时，直接完成可执行的步骤。需要我操作时，每次说清在哪个应用或界面、点哪个按钮，等我反馈后继续。以 Mac 桌面上实际显示四格和右上角的取数时间为安装完成的标准。
+```
 
 ### 1. 准备构建工具和签名
 
