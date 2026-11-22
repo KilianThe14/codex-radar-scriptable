@@ -2,11 +2,26 @@
 
 在 iPhone 主屏幕看 Codex 雷达榜单的前四个模型。每格显示该模型的最高分档位、智商分数和美元费用估算，右上角显示北京时间的取数时间。
 
-[下载 Codex-Radar.scriptable](https://github.com/KilianThe14/codex-radar-scriptable/releases/latest/download/Codex-Radar.scriptable)
+[下载 Codex-Radar.scriptable](https://github.com/KilianThe14/codex-radar-scriptable/releases/latest/download/Codex-Radar.scriptable) · [用 Agent 安装](#用-agent-安装)
 
 <img src="docs/preview.jpg" width="420" alt="iPhone 主屏幕截图，中号 Codex Radar 小组件显示四个模型的质量分和成本">
 
 ## 安装到 iPhone
+
+### 用 Agent 安装
+
+通过 Agent 打开这个仓库时，复制下面的 Prompt 发给它，让它带你从当前进度完成安装。
+
+```text
+请帮我在 iPhone 上安装并配置 Codex Radar 小组件。先读下面的 README，按「安装到 iPhone」里的步骤使用仓库提供的安装包。
+https://github.com/KilianThe14/codex-radar-scriptable#readme
+
+请依次完成安装 Scriptable、导入并运行 Codex Radar，以及在 iPhone 主屏幕添加中号 Scriptable 小组件。长按主屏幕上的组件，进入「编辑小组件」，在 Script 里选择 Codex Radar。如果我已经完成一部分，从当前进度继续。
+
+如果你能操作经我授权的 iPhone，直接完成可操作的步骤。需要我操作时，每次说清该在哪个 App 或界面、点哪个按钮，等我反馈后继续。
+
+安装完成时，请确认 iPhone 主屏幕显示四个模型的卡片和右上角的取数时间。
+```
 
 ### 1. 下载并导入脚本
 
